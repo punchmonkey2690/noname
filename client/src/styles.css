@@ -1,0 +1,326 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #140f22;
+  color: #f7f5ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(117, 76, 181, 0.4), transparent 30%),
+    linear-gradient(180deg, #1b1330 0%, #120d20 100%);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Press Start 2P', cursive;
+  color: #ffd166;
+}
+
+.app-shell {
+  padding: 24px;
+}
+
+.topbar,
+.office-card,
+.card {
+  background: rgba(24, 18, 38, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.topbar {
+  border-radius: 24px;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.topbar h1,
+.office-meta h2,
+.panel-heading h2,
+.tab-content h3 {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  opacity: 0.7;
+  margin: 0 0 10px;
+}
+
+.project-pill {
+  text-align: right;
+  background: rgba(115, 92, 171, 0.35);
+  padding: 12px 16px;
+  border-radius: 16px;
+}
+
+.project-pill span,
+label,
+.log-list span,
+.task-card small,
+.file-card small,
+.agent-chip small {
+  color: #b8b0d2;
+  display: block;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 20px;
+}
+
+.office-card,
+.sidebar,
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-card {
+  padding: 20px;
+  border-radius: 28px;
+}
+
+.office-meta,
+.panel-heading,
+.status-grid,
+.chat-form,
+.chat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.swatch-manager { background: #ff7b7b; }
+.swatch-dev { background: #60d6ff; }
+.swatch-sm { background: #ffd166; }
+
+.office-canvas {
+  width: 100%;
+  border-radius: 24px;
+  margin-top: 20px;
+  background: linear-gradient(180deg, #2d2145 0%, #1b112f 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer;
+}
+
+.agent-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.agent-chip,
+.tab,
+.chat-form button {
+  border: none;
+  border-radius: 16px;
+  padding: 12px;
+  color: inherit;
+  background: rgba(255,255,255,0.06);
+}
+
+.agent-chip.active,
+.tab.active,
+.chat-form button {
+  background: linear-gradient(135deg, #8a5cf6, #49c6ff);
+  color: #fff;
+}
+
+.sidebar {
+  gap: 20px;
+}
+
+.card {
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.role-tag {
+  align-self: flex-start;
+  background: rgba(96, 214, 255, 0.18);
+  color: #8ce0ff;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 16px;
+}
+
+.status-grid p,
+.thought-box p,
+.file-card p,
+.task-card strong {
+  margin: 6px 0 0;
+}
+
+.thought-box,
+.memory-box,
+.tab-content,
+.chat-stream {
+  margin-top: 18px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.memory-box ul,
+.bullet-list {
+  padding-left: 18px;
+  margin: 10px 0 0;
+}
+
+.grow {
+  flex: 1;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  text-transform: capitalize;
+}
+
+.bubble-list,
+.file-grid,
+.kanban-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.bubble-item,
+.file-card,
+.task-card,
+.kanban-column {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.kanban-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.kanban-column header {
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 10px;
+  font-size: 0.7rem;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.log-list p,
+.chat-stream p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.chat-tab {
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+}
+
+.chat-stream {
+  flex: 1;
+  overflow: auto;
+}
+
+.chat-form {
+  margin-top: 12px;
+}
+
+.chat-form input,
+.chat-toolbar select {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  padding: 12px 14px;
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .topbar,
+  .office-meta,
+  .panel-heading,
+  .status-grid,
+  .chat-form {
+    display: block;
+  }
+
+  .project-pill {
+    margin-top: 16px;
+    text-align: left;
+  }
+
+  .kanban-grid {
+    grid-template-columns: 1fr;
+  }
+}
