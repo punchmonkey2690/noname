@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-card">
+        <div class="screen-bezel"></div>
+        <header class="hero">
+          <p class="eyebrow">SAVE FILE 01</p>
+          <h1>Pixel Tasks</h1>
+          <p class="subtitle">A tiny retro quest log for your daily side missions.</p>
+        </header>
+
+        <section class="status-bar" aria-label="Todo summary">
+          <div>
+            <span class="label">Active</span>
+            <strong id="active-count">0</strong>
+          </div>
+          <div>
+            <span class="label">Done</span>
+            <strong id="completed-count">0</strong>
+          </div>
+          <div>
+            <span class="label">Streak</span>
+            <strong>8-bit</strong>
+          </div>
+        </section>
+
+        <form class="task-form" id="task-form">
+          <label class="sr-only" for="task-input">Add a task</label>
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            maxlength="80"
+            placeholder="Add a new quest..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit">+ Add</button>
+        </form>
+
+        <section class="filters" aria-label="Filter tasks">
+          <button class="filter is-active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="active" type="button">Active</button>
+          <button class="filter" data-filter="completed" type="button">Done</button>
+        </section>
+
+        <ul class="task-list" id="task-list" aria-live="polite"></ul>
+
+        <template id="task-template">
+          <li class="task-item">
+            <label class="task-toggle">
+              <input class="task-checkbox" type="checkbox" />
+              <span class="pixel-box"></span>
+            </label>
+            <span class="task-text"></span>
+            <button class="delete-button" type="button" aria-label="Delete task">×</button>
+          </li>
+        </template>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
